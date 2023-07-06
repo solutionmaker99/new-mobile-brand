@@ -1,0 +1,122 @@
+/* ==============================================
+================    RESPONSIVE CSS  ========== */
+
+:root {
+    --main-color: #8865FF;
+    --color-1: #e91e63;
+    --color-2: #f5ae10;
+    --color-3: #09d69c;
+    --bg-dark: #2b2c2f;
+    --main-to-dark-color: var(--main-color);
+    --dark-to-main-color: var(--bg-dark);
+    --shadow-black-100: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-black-300: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --black-900: #000000;
+    --black-100: #f7f7f7;
+    --black-400: #555555;
+    --black-000: #ffffff;
+    --black-alfa-100: rgba(0, 0, 0, 0.05);
+}
+
+@media(max-width:991px) {
+    .navbar-toggler {
+        background-color: var(--main-to-dark-color);
+        box-shadow: var(--shadow-black-300);
+        height: 34px;
+        width: 44px;
+        padding: 0;
+        font-size: 17px;
+        color: #ffffff;
+    }
+    .navbar-nav {
+        background-color: var(--dark-to-main-color);
+        box-shadow: var(--shadow-black-300);
+    }
+    .navbar .nav-item {
+        margin: 0;
+        padding: 5px 15px;
+    }
+    .navbar.navbar_srink .navbar-nav,
+    .navbar.navbar_srink .navbar-nav {
+        background-color: var(--main-color);
+    }
+    .home-img .circle {
+        height: 320px;
+        width: 320px;
+    }
+    .home-img .circle::before {
+        left: 18px;
+        top: 18px;
+        transform-origin: 142px 142px;
+    }
+    .home_text h1 {
+        font-size: 40px;
+    }
+    .home_text p {
+        font-size: 16px;
+    }
+    .effect_wrap .effect-3 {
+        left: 3%;
+    }
+    .effect_wrap .effect-2 {
+        right: 5%;
+        top: 19%;
+    }
+    .pricing-plan,
+    .todo_item,
+    .download_card {
+        margin: 30px;
+    }
+    .todo_item {
+        border-radius: 10px;
+        box-shadow: var(--shadow-black-100);
+    }
+    .todo_item.line-right::before {
+        content: none;
+    }
+    .contact-form .form-group {
+        margin-top: 25px;
+    }
+    .footer-col {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:775px) {
+    .home_text h1 {
+        font-size: 30px;
+    }
+    .home_text p {
+        font-size: 16px;
+    }
+    .fun_fact h3 {
+        padding-top: 50px;
+    }
+    .fun_fact h3 {
+        text-align: center;
+    }
+    .owl-item {
+        width: 240px;
+    }
+}
+
+@media(max-width:767px) {
+    .home_text h1 {
+        font-size: 30px;
+    }
+    .fun_img {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:575px) {
+    .home_text {
+        margin-bottom: 80px;
+    }
+    .home-img {
+        margin-top: 50px;
+    }
+    .section-title h1 {
+        font-size: 30px;
+    }
+}

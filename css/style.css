@@ -1,0 +1,1166 @@
+/* ========================
+======  FONTS IMPORT ======
+==========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,900;1,100;1,300;1,400&display=swap');
+
+/* ======================
+======  COMMON CSS ======
+*/
+
+:root {
+    --main-color: #8865FF;
+    --color-1: #e91e63;
+    --color-2: #f5ae10;
+    --color-3: #09d69c;
+    --bg-dark: #2b2c2f;
+    --main-to-dark-color: var(--main-color);
+    --dark-to-main-color: var(--bg-dark);
+    --shadow-black-100: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-black-300: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --black-900: #000000;
+    --black-100: #f7f7f7;
+    --black-400: #555555;
+    --black-000: #ffffff;
+    --black-alfa-100: rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: #fff;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+body.dark {
+    background: var(--bg-dark);
+    --black-100: var(--bg-dark);
+    --black-000: var(--bg-dark);
+    --main-to-dark-color: var(--bg-dark);
+    --dark-to-main-color: var(--main-color);
+    --shadow-black-100: var(--shadow-black-300);
+    --black-alfa-100: rgba(255, 255, 255, 0.05);
+    --black-900: #ffffff;
+    --black-400: #bbb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none!important;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.btn-1 {
+    background-color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    color: var(--main-color);
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    box-shadow: var(--shadow-black-300);
+    font-weight: 500;
+}
+
+.btn-1:focus {
+    box-shadow: var(--shadow-black-300);
+}
+
+.btn-1:hover {
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+.btn-2 {
+    background-color: var(--main-color);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    box-shadow: var(--shadow-black-300);
+    font-weight: 500;
+}
+
+.btn-2:focus {
+    box-shadow: var(--shadow-black-100);
+}
+
+.btn-2:hover {
+    color: var(--main-color);
+    background-color: #fff;
+}
+
+
+/* ===========================
+==== KEYFRAME AREA CSS ==== */
+
+@keyframes spin_01 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin_02 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes bounceTop_01 {
+    0%,
+    100% {
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pulse_01 {
+    0% {
+        transform: scale(0.94);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
+    }
+    100% {
+        transform: scale(0.94);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.effect_wrap .effect {
+    position: absolute;
+    z-index: -1;
+}
+
+.effect_wrap .effect-1 {
+    left: 20%;
+    top: 20%;
+    font-size: 20px;
+    color: var(--color-2);
+    animation: spin_01 5s linear infinite;
+}
+
+.effect_wrap .effect-2 {
+    right: 20%;
+    top: 15%;
+    font-size: 20px;
+    color: var(--color-3);
+    animation: spin_02 5s linear infinite;
+}
+
+.effect_wrap .effect-3 {
+    left: 15%;
+    top: 70%;
+    font-size: 20px;
+    color: #00ff00;
+    animation: bounceTop_01 4.5s linear infinite;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: var(--black-900);
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0;
+}
+
+.section-title h2 span {
+    color: var(--main-color);
+}
+
+.owl-carousel .owl-dots {
+    padding: 0 15px;
+    text-align: center;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
+    height: 5px;
+    width: 24px;
+    background: #ddd;
+    border-radius: 5px;
+    margin: 0px 4px;
+    display: inline-block;
+}
+
+.owl-carousel button.owl-dot.active {
+    background-color: var(--main-color);
+}
+
+
+/* ======================
+======  NAVBAR CSS ======
+*/
+
+.navbar {
+    background-color: var(--main-to-dark-color);
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.navbar.navbar_srink {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--main-to-dark-color);
+    padding: 10px 0;
+}
+
+.navbar>.container {
+    padding: 0 15px;
+}
+
+.navbar .navbar-brand {
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Poppins';
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.navbar .nav-item {
+    margin-left: 40px;
+}
+
+.navbar .nav-item .nav-link {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 0;
+    position: relative;
+}
+
+.navbar .nav-item .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #fff;
+    transition: all ease 0.5s;
+    transform: scale(0);
+}
+
+.navbar .nav-item .nav-link.active::before,
+.navbar .nav-item .nav-link:hover::before {
+    transform: scale(1);
+}
+
+
+/* ======================
+======  HOME STYLE CSS ======
+*/
+
+.home {
+    height: 100vh;
+    padding: 150px 0;
+    background-color: var(--main-to-dark-color);
+    border-radius: 0 0 0 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.home_text h1 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 20px;
+}
+
+.home_text p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+    margin: 0;
+    font-weight: 300;
+}
+
+.home .home-btn {
+    margin-top: 40px;
+}
+
+.home .home-btn .play-btn {
+    margin-left: 30px;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    font-size: 16px;
+    animation: pulse_01 2s ease infinite;
+}
+
+.home .home-btn .play-btn i {
+    line-height: 50px;
+}
+
+.home .home-btn .play-btn:hover {
+    animation: none;
+    box-shadow: var(--shadow-black-300);
+}
+
+.home-img img {
+    max-width: 250px;
+    width: 100%;
+    position: relative;
+    box-shadow: var(--shadow-black-100);
+    border-radius: 32px;
+    animation: bounceTop_01 3s ease infinite;
+}
+
+.home-img .circle {
+    position: absolute;
+    z-index: 1;
+    height: 400px;
+    width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-img .circle::before {
+    content: '';
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    height: 66px;
+    width: 66px;
+    border-radius: 50%;
+    left: 30px;
+    top: 30px;
+    transform-origin: 170px 170px;
+    animation: spin_01 10s linear infinite;
+}
+
+
+/* ==== VIDEO POPUP ====== */
+
+.video_popup {
+    padding: 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1999;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.video_popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.video_popup_inner {
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+}
+
+.video_popup .video-popup-close {
+    position: absolute;
+    right: 0;
+    top: -30px;
+    height: 30px;
+    width: 30px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    color: var(--black-000);
+}
+
+.video_popup .iframe_box {
+    height: 0;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.video_popup #player-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* ======================================
+=======  Feature Section CSS ===========*/
+
+.features .feature-item {
+    box-shadow: var(--shadow-black-100);
+    margin: 15px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.features .feature-item::before,
+.features .feature-item::after {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+
+.features .feature-item::before {
+    height: 20px;
+    width: 20px;
+    background-color: var(--color-1);
+    left: -20px;
+    top: 40%;
+    opacity: 0;
+}
+
+.features .feature-item:hover::before {
+    left: 10px;
+    opacity: 1;
+}
+
+.features .feature-item::after {
+    height: 30px;
+    width: 30px;
+    background-color: var(--color-2);
+    right: -30px;
+    top: 80%;
+    opacity: 0;
+}
+
+.features .feature-item:hover::after {
+    right: 20px;
+    opacity: 1;
+}
+
+.features .feature-item .icon {
+    color: var(--main-color);
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    margin: 0px auto 30px;
+    font-size: 30px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.features .feature-item .icon::before {
+    content: '';
+    position: absolute;
+    left: 100%;
+    border-radius: 50%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    transition: all 0.5s ease;
+    z-index: -1;
+    opacity: 0;
+}
+
+.features .feature-item:hover .icon {
+    color: #fff;
+    font-size: 20px;
+}
+
+.features .feature-item:hover .icon::before {
+    left: 0;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.features .feature-item i {
+    line-height: 60px;
+}
+
+.features .feature-item h3 {
+    font-size: 22px;
+    margin: 0 0 20px;
+    color: var(--black-900);
+    font-weight: 500;
+}
+
+.features .feature-item p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    color: var(--black-400);
+    margin: 0 0 15px;
+}
+
+
+/* ===========================
+======  FUN SECTION CSS ====*/
+
+.fun_fact {
+    background-color: var(--black-100);
+}
+
+.fun_fact .section-title {
+    margin-bottom: 20px;
+}
+
+.fun_fact .section-title h2 {
+    text-align: left;
+}
+
+.fun_img img {
+    max-width: 250px;
+    width: 100%;
+    box-shadow: var(--shadow-black-100);
+    border-radius: 32px;
+    animation: bounceTop_01 4.5s linear infinite;
+}
+
+.fun_fact h3 {
+    font-size: 40px;
+    margin: 0 0 20px;
+    color: var(--black-900);
+    font-weight: 700;
+}
+
+.fun_fact h3 span {
+    color: var(--main-color);
+}
+
+.fun_text p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    color: var(--black-400);
+    margin: 0 0 15px;
+}
+
+.fun_item {
+    margin-top: 30px;
+    padding: 30px 40px;
+    box-shadow: var(--shadow-black-100);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fun_item.style-1 {
+    background-color: var(--color-1);
+}
+
+.fun_item.style-2 {
+    background-color: var(--color-2);
+}
+
+.fun_item.style-3 {
+    background-color: var(--color-3);
+}
+
+.fun_item.style-4 {
+    background-color: var(--main-color);
+}
+
+.fun_item h3 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+
+.fun_item span {
+    margin: 0;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+}
+
+
+/* ======================================
+======  Screenshot Section CSS ========*/
+
+
+/* 
+
+/* .screenshot-item {
+     margin: 15px; 
+}*/
+
+.screenshot-item img {
+    width: 100%;
+    max-width: 250px;
+}
+
+
+/* ======================================
+======  Dwonlead App Section CSS =======*/
+
+.downlead_app {
+    margin-top: 30px;
+    background-image: url('../img/img/download-app-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+
+.downlead_app .section-title h2 {
+    color: #fff;
+}
+
+.downlead_app::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-to-dark-color);
+    opacity: 0.8;
+}
+
+.download_card {
+    background-color: var(--black-000);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.download_card i {
+    font-size: 30px;
+    color: var(--main-color);
+    display: inline-block;
+}
+
+.download_card h3 {
+    font-size: 22px;
+    color: var(--black-900);
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+.download_card p {
+    font-size: 16px;
+    color: var(--black-400);
+    font-weight: 300;
+    margin: 0 0 30px;
+    line-height: 26px;
+}
+
+
+/* ======================================
+======  HOW IT WORK SECTION STYLE ======
+========================================*/
+
+.todo_item {
+    padding: 30px;
+    text-align: center;
+    z-index: 1;
+}
+
+.todo_item.line-right::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 50%;
+    top: 59px;
+    background-color: var(--main-color);
+    z-index: -1;
+}
+
+.todo_item .step {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    background-color: var(--main-color);
+    text-align: center;
+    font-size: 30px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+
+.todo_item h3 {
+    margin: 20px 0px;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.todo_item p {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+    color: var(--black-400);
+    line-height: 26px;
+}
+
+
+/* ======================================
+======  TESTINONIAL SECTION STYLE ======
+========================================*/
+
+.testimonial {
+    background-color: var(--black-100);
+}
+
+.testimonial_item {
+    margin: 15px;
+    padding: 30px;
+    box-shadow: var(--shadow-black-100);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.testimonial_item .img_box {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 30px;
+    border: 4px solid var(--main-color);
+    border-radius: 50%;
+    position: relative;
+}
+
+.testimonial_item .img_box img {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.testimonial_item .img_box i {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    background: var(--main-color);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    left: calc(100% - 15px);
+    top: calc(50% - 15px);
+}
+
+.testimonial_item p {
+    font-size: 16px;
+    margin: 0 0 20px;
+    color: var(--black-400);
+    line-height: 26px;
+    font-weight: 300;
+}
+
+.testimonial_item h3 {
+    font-size: 18px;
+    color: var(--black-900);
+    font-weight: 500;
+    margin: 0 0 5px;
+}
+
+.testimonial_item span {
+    display: block;
+    font-size: 16px;
+    color: var(--black-400);
+    font-weight: 300;
+}
+
+.testimonial_item .rating {
+    margin-top: 16px;
+}
+
+.testimonial_item .rating i {
+    display: inline-block;
+    font-size: 16px;
+    color: var(--color-2);
+}
+
+
+/*======================================
+=========== PRISING AREA CSS  =========
+===================================== */
+
+.pricing-plan {
+    box-shadow: var(--shadow-black-100);
+    border-radius: 10px;
+}
+
+.pricing-header {
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--black-alfa-100);
+}
+
+.pricing-header h3 {
+    text-align: center;
+    font-size: 30px;
+    color: var(--black-900);
+    font-weight: 500;
+    margin: 0;
+}
+
+.pricing-price {
+    padding: 40px 30px;
+    display: flex;
+    justify-content: center;
+    line-height: 0.7;
+}
+
+.pricing-price .currency {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--black-400);
+    margin-right: 5px;
+    align-self: start;
+}
+
+.pricing-price .price {
+    font-size: 90px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.pricing-price .time {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--black-400);
+    margin-right: 50px;
+    align-self: flex-end;
+}
+
+.pricing-body {
+    padding: 0 30px;
+}
+
+.pricing-body ul li {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--black-400);
+    padding: 10px 0 10px 30px;
+    border-bottom: 1px solid var(--black-alfa-100);
+    line-height: 26px;
+    position: relative;
+}
+
+.pricing-body ul li:last-child {
+    border-bottom: none;
+}
+
+.pricing-body ul li i {
+    color: var(--main-color);
+    position: absolute;
+    left: 0;
+    top: 12px;
+}
+
+.pricing-footer {
+    padding: 20px 30px 30px;
+    text-align: center;
+}
+
+
+/* ======================================
+======  TESTIMONIAL SECTION STYLE ======
+========================================*/
+
+.team-member {
+    background-color: var(--black-100);
+}
+
+.team_item {
+    margin: 15px;
+    padding: 15px;
+    box-shadow: var(--shadow-black-100);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.team_item .box_img {
+    height: 280px;
+    width: 250px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.team_item h3 {
+    font-size: 18px;
+    color: var(--black-900);
+    font-weight: 500;
+    margin: 15px 0 5px;
+}
+
+.team_item span {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--black-400);
+}
+
+
+/* ======================================
+======  FAQ SECTION STYLE ======
+========================================*/
+
+.faq .accordion-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.faq .accordion-header {
+    box-shadow: var(--shadow-black-100);
+    transition: all 0.5s ease;
+    padding: 20px 30px;
+    position: relative;
+}
+
+.faq .accordion-header::before {
+    content: "\f067";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    color: var(--black-400);
+    transition: all 0.5s ease;
+}
+
+.faq .accordion-header:not(.collapsed) {
+    background-color: var(--main-color);
+}
+
+.faq .accordion-header:not(.collapsed)::before {
+    content: "\f068";
+    color: #fff;
+}
+
+.faq .accordion-header h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black-400);
+    margin: 0;
+    transition: all 0.5s ease;
+}
+
+.faq .accordion-header:not(.collapsed) h3 {
+    color: var(--black-000);
+}
+
+.faq .accordion-body {
+    padding: 30px;
+    background-color: var(--black-100);
+}
+
+.faq .accordion-body p {
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--black-400);
+    line-height: 26px;
+    margin: 0;
+}
+
+
+/* ======================================
+======  CONTACT US SECTION STYLE ========
+========================================*/
+
+.contact {
+    background-color: var(--black-100);
+}
+
+.contact-info h3 {
+    font-size: 22px;
+    color: var(--black-900);
+    font-weight: 500;
+    margin: 0 0 40px;
+}
+
+.contact-info-item {
+    position: relative;
+    padding-left: 55px;
+    margin-bottom: 30px;
+}
+
+.contact-info-item i {
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    text-align: center;
+    line-height: 38px;
+}
+
+.contact-info-item h4 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 10px;
+    color: var(--black-900);
+}
+
+.contact-info-item p {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 10px;
+    line-height: 26px;
+    color: var(--black-400);
+}
+
+.cotact-form .form-group {
+    margin-bottom: 25px;
+}
+
+.cotact-form .form-control {
+    height: 52px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    box-shadow: var(--shadow-black-100);
+    padding: 0 1.5rem;
+    color: var(--black-900);
+    background: var(--black-000);
+    transition: all 0.5s ease;
+}
+
+.cotact-form .form-control:focus {
+    border-color: var(--main-color);
+}
+
+.cotact-form textarea.form-control {
+    padding-top: 12px;
+    height: 140px;
+    resize: none;
+}
+
+
+/* ======================================
+======  FOOTER SECTION STYLE ============
+========================================*/
+
+.footer {
+    background-color: var(--main-color);
+    padding: 50px 0 0;
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #f7f7f7;
+    margin: 0 0 25px;
+}
+
+.footer-col p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    line-height: 26px;
+    margin: 0;
+}
+
+.footer-col ul {
+    margin: 0;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    line-height: 26px;
+    margin: 0;
+    display: block;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+    padding-left: 5px;
+}
+
+.footer .copyright-text {
+    margin: 50px 0 0;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+/* ======================================
+======  DARK & LIGHT THEME STYLE ========
+========================================*/
+
+.toggle-theme {
+    position: fixed;
+    left: 0;
+    top: calc(50% - 5px);
+    height: 40px;
+    width: 40px;
+    z-index: 1200;
+    background-color: var(--dark-to-main-color);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: var(--shadow-black-300);
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
